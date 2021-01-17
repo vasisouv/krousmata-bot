@@ -10,7 +10,7 @@ You can use `python main.py` to start the bot.
 
 ## Configuration
 
-Copy or Rename `.env.example` to `.enmv` and fill out the TOKEN:
+Copy or Rename `.env.example` to `.env` and fill out the TOKEN:
 
 ⚠ **Note: Never commit or share your token publicly** ⚠️
 

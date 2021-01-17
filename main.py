@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
-def get_cases(endpoint):
+def fetch_cases(endpoint):
     r = requests.get(f'https://covid-19-greece.herokuapp.com/{endpoint}')
     d = r.json()
     cases = d['cases']
@@ -21,17 +21,17 @@ def get_cases(endpoint):
 
 
 def get_date_confirmed_and_deaths():
-    cases = get_cases('all')
+    cases = fetch_cases('all')
     last_known = cases[-1]
     p_last_known = cases[-2]
     confirmed = last_known['confirmed'] - p_last_known['confirmed']
     deaths = last_known['deaths'] - p_last_known['deaths']
-    date = datetime.datetime.strptime(last_known['date'], '%Y-%m-%d').strftime("%b %d %Y")
+    date = datetime.datetime.strptime(last_known['date'], '%Y-%m-%d').strftime("%d %b %Y")
     return date, confirmed, deaths
 
 
 def get_intensive():
-    cases = get_cases('intensive-care')
+    cases = fetch_cases('intensive-care')
     return cases[-1]['intensive_care']
 
 
