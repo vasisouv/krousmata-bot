@@ -15,7 +15,7 @@ Copy or Rename `.env.example` to `.enmv` and fill out the TOKEN:
 ⚠ **Note: Never commit or share your token publicly** ⚠️
 
 ```.env
-TOKEN=yourtokengoeshere
+TOKEN=[your bot token]
 ```
 
 ## Commands
