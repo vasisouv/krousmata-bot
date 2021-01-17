@@ -51,7 +51,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('/krousmata') or message.content.startswith('/gkrouzmata'):
+    def should_send_data(message):
+        text = message.content
+        return text.startswith('/krousmata') or text.startswith('/gkrouzmata') or client.user.mentioned_in(message)
+
+    if should_send_data(message):
         date, confirmed, deaths, intensive = get_data()
         await message.channel.send(f'{date}: {confirmed} κρούσματα | {deaths} θάνατοι | {intensive} ΜΕΘ')
 
