@@ -1,4 +1,4 @@
-# 🤖 krousmata
+# 🤖 krousmata-bot
 > krousmata-bot is a Discord Bot built with discord.py that displays Greece's daily number of Covid-19 cases and other information
 
 ## Requirements
