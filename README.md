@@ -21,7 +21,7 @@ TOKEN=[your bot token]
 ## Commands
 `/krousmata`
 
-* Displays the last know daily number of cases and other information
+* Displays the last known daily number of cases and other information
 
 ## Credits
 
